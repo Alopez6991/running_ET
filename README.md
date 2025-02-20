@@ -17,3 +17,6 @@
 
 ## Opticflow
 * ```rosrun optic_flow_example optic_flow_lucas_kanade.py --topic='/camera/color/image_raw'```
+
+## data collection
+* ``` rosbag record -o linear /trisonica /trisonica_body_level /trisonica_global /mavros/local_position/pose /mavros/rc/in /mavros/rc/out /mavros/imu/data /camera/color/image_raw```
