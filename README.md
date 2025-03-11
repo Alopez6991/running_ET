@@ -14,6 +14,7 @@
 
 ## realsene
 * ```roslaunch realsense2_camera rs_camera.launch align_depth:=true depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=60```
+* * ```roslaunch realsense2_camera rs_camera.launch align_depth:=true depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=100```
 
 ## Opticflow
 * ```rosrun optic_flow_example optic_flow_lucas_kanade.py --topic='/camera/color/image_raw'```
