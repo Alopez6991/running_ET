@@ -12,12 +12,18 @@
 * make sure the sensor is on. it has a physical on off switch.
 * ```rosrun trisonics trisonica_body_level.py```
 
-## realsene
+## realsene 60 Hz
 * ```roslaunch realsense2_camera rs_camera.launch align_depth:=true depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=60```
-* * ```roslaunch realsense2_camera rs_camera.launch align_depth:=true depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=100```
+
+## realsene 100 Hz
+* ```roslaunch realsense2_camera rs_camera.launch align_depth:=true depth_width:=640 depth_height:=480 depth_fps:=30 color_width:=640 color_height:=480 color_fps:=100```
 
 ## Opticflow
 * ```rosrun optic_flow_example optic_flow_lucas_kanade.py --topic='/camera/color/image_raw'```
 
-## data collection
+## data collection (replace linear with your file name)
 * ``` rosbag record -o linear /trisonica /trisonica_body_level /trisonica_global /mavros/local_position/pose /mavros/rc/in /mavros/rc/out /mavros/imu/data /mavros/imu/data_raw /camera/color/image_raw```
+
+# Post process
+* ``` rosbag play linear.bag```
+* 
